@@ -10,7 +10,7 @@ const prodConf = {
   module: {
     rules: [
       {
-        test: /\.(scss|css)$/,
+        test: /(?<!\.module)\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -24,7 +24,7 @@ const prodConf = {
         ]
       },
       {
-        test: /\.module\.(scss|css)$/,
+        test: /(?<=\.module)\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {

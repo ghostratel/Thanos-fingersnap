@@ -29,11 +29,11 @@ const getCanvasAnimateAttr = () => (
         150,
         400
       )}px, ${getRandomNumber(
-        -50,
-        -200
+        -200,
+        20
       )}px, 0) rotate(${getRandomNumber(-15, 15)}deg)`,
       opacity: 0,
-      filter: 'blur(3px)'
+      filter: 'blur(2px)'
     }
   ]
 )

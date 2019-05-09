@@ -16,7 +16,7 @@ const devConf = {
   module: {
     rules: [
       {
-        test: /\.(scss|css)$/,
+        test: /(?<!\.module)\.(scss|css)$/,
         use: [
           'style-loader',
           {
@@ -30,7 +30,7 @@ const devConf = {
         ]
       },
       {
-        test: /\.module\.(scss|css)$/,
+        test: /(?<=\.module)\.(scss|css)$/,
         use: [
           'style-loader',
           {
