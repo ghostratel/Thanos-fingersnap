@@ -1,4 +1,4 @@
-# awsome-jsonp
+# thanos-fingersnap
 
 Disappear the part of your website that which you want, just like Thanos snap his finger with infinity glove.
 
