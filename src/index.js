@@ -68,23 +68,22 @@ Thanos.prototype.snap = function() {
 	for (let i = 0; i < this.$imageDataArray.length; i++) {
 		let canvas = data2canvas(this.$imageDataArray[i], this.width, this.height)
 		canvas.classList.add('Thanos')
-    this.$el.appendChild(canvas)
-    let scale =  getRandomNumber(1,1.2)
-    snabbt(canvas, {
-      position: [getRandomInteger(150, 400), getRandomInteger(-200, 200), 0],
-      rotation: [0, 0, -Math.PI / getRandomInteger(12, 15)],
-      scale: [scale,scale],
-      opacity: 0,
-      duration: 2000,
-      delay: i * this.count,
-      easing: 'easeIn',
-      fromOpacity: 1
-    })
+		this.$el.appendChild(canvas)
+		let scale = getRandomNumber(1, 1.2)
+		snabbt(canvas, {
+			position: [getRandomInteger(150, 400), getRandomInteger(-200, 200), 0],
+			rotation: [0, 0, -Math.PI / getRandomInteger(12, 15)],
+			scale: [scale, scale],
+			opacity: 0,
+			duration: 2000,
+			delay: i * this.count,
+			easing: 'easeIn',
+			fromOpacity: 1
+		})
 		setTimeout(() => {
 			this.$el.removeChild(canvas)
 		}, 2000 + i * this.count)
-  }
-
+	}
 }
 
 Thanos.prototype.restore = function() {
@@ -92,4 +91,3 @@ Thanos.prototype.restore = function() {
 }
 
 export default Thanos
-
