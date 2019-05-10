@@ -1,6 +1,6 @@
 {
   "name": "thanos-fingersnap",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Disappear the part of your website that which you want, just like Thanos snap his finger with infinity glove.",
   "main": "dist/index.umd.min.js",
   "scripts": {

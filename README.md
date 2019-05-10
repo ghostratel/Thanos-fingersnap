@@ -2,6 +2,8 @@
 
 Disappear the part of your website that which you want, just like Thanos snap his finger with infinity glove.
 
+[demo](http://zhuoyao.webpreview.duowan.com/1905/m_421433502382.html)
+
 ## Installation
 
 In a browser:
