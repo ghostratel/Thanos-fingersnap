@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content" id='wrapper' >
+        <h1>Title title</h1>
+                 <p>desc desc desc</p>
+                 <a href="http://">link</a>
+     </div>
+     <button id='snap'>snap!</button>
+     <button id='restore'>restore!</button>
+    <script src="./index.umd.min.js"></script>
+    <script>
+      var thanos = new Thanos({
+        el: '#wrapper'
+      })
+
+      document.getElementById('snap').addEventListener('click', function() {
+        thanos.snap()
+      })
+
+      document.getElementById('restore').addEventListener('click', function() {
+        thanos.restore()
+      })
+
+    </script>
+</body>
+
+</html>

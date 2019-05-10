@@ -1,74 +1,28 @@
 {
-	"name": "webpack-seed",
-	"version": "1.0.0",
-	"description": "",
-	"sideEffects": [
-		"@babel/polyfill",
-		"*.css",
-		"*.scss",
-		"*.vue"
-	],
-	"scripts": {
-		"bundle": "webpack --config webpack.dev.js",
-		"dev": "webpack-dev-server --config webpack.dev.js",
-		"build": "webpack --config webpack.prod.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ghostratel/webpack-seed.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/ghostratel/webpack-seed/issues"
-	},
-	"homepage": "https://github.com/ghostratel/webpack-seed#readme",
-	"dependencies": {
-		"@babel/polyfill": "^7.4.3",
-		"chance": "^1.0.18",
-		"html2canvas": "^1.0.0-rc.1",
-		"velocity-animate": "^1.5.2",
-		"vue": "^2.6.10",
-		"webpack-cli": "^3.3.0"
-	},
-	"devDependencies": {
-		"core-js": "^3.0.0",
-		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
-		"babel-eslint": "^10.0.1",
-		"@babel/core": "^7.4.3",
-		"@babel/preset-env": "^7.4.3",
-		"autoprefixer": "^9.5.0",
-		"babel-loader": "^8.0.5",
-		"clean-webpack-plugin": "^2.0.1",
-		"css-loader": "^2.1.1",
-		"eslint": "^5.16.0",
-		"eslint-config-standard": "^12.0.0",
-		"eslint-loader": "^2.1.2",
-		"eslint-plugin-import": "^2.16.0",
-		"eslint-plugin-node": "^8.0.1",
-		"eslint-plugin-promise": "^4.1.1",
-		"eslint-plugin-standard": "^4.0.0",
-		"eslint-plugin-vue": "^5.2.2",
-		"file-loader": "^3.0.1",
-		"html-loader": "^0.5.5",
-		"html-webpack-plugin": "^3.2.0",
-		"mini-css-extract-plugin": "^0.5.0",
-		"node-sass": "^4.11.0",
-		"optimize-css-assets-webpack-plugin": "^5.0.1",
-		"postcss-loader": "^3.0.0",
-		"sass-loader": "^7.1.0",
-		"style-loader": "^0.23.1",
-		"terser-webpack-plugin": "^1.2.3",
-		"url-loader": "^1.1.2",
-		"vue-loader": "^15.7.0",
-		"vue-template-compiler": "^2.6.10",
-		"webpack": "^4.29.6",
-		"webpack-dev-server": "^3.2.1",
-		"webpack-merge": "^4.2.1"
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	]
+  "name": "thanos-fingersnap",
+  "version": "1.0.0",
+  "description": "Disappear the part of your website that which you want, just like Thanos snap his finger with infinity glove.",
+  "main": "dist/index.umd.min.js",
+  "scripts": {
+    "build": "bili",
+    "dev": "bili --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghostratel/Thanos-fingersnap.git"
+  },
+  "keywords": [],
+  "author": "GHOSTRATEL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghostratel/Thanos-fingersnap.git/issues"
+  },
+  "homepage": "https://github.com/ghostratel/Thanos-fingersnap.git#readme",
+  "devDependencies": {
+    "bili": "^4.7.3"
+  },
+  "dependencies": {
+    "snabbt.js": "^0.6.4",
+    "html2canvas": "^1.0.0-rc.1"
+  }
 }

@@ -1,5 +1,8 @@
-const getRandomNumber = (min = 0, max = 9) =>
+const getRandomInteger = (min = 0, max = 9) =>
   Math.floor(Math.random() * (+max - +min)) + +min
+
+const getRandomNumber = (min = 0, max = 9) =>
+  (Math.random() * (+max - +min)) + +min
 
 
 const data2canvas = (imageData, width, height) => {
@@ -22,20 +25,20 @@ const getCanvasAnimateAttr = () => (
     {
       transform: 'translate3d(0,0,0) rotate(0)',
       opacity: 1,
-      filter: 'blur(0px)'
+      filter: 'blur(0px) grayscale(0)'
     },
     {
-      transform: `translate3d(${getRandomNumber(
+      transform: `translate3d(${getRandomInteger(
         150,
         400
-      )}px, ${getRandomNumber(
+      )}px, ${getRandomInteger(
         -200,
         20
-      )}px, 0) rotate(${getRandomNumber(-15, 15)}deg)`,
+      )}px, 0) rotate(${getRandomInteger(-15, 15)}deg)`,
       opacity: 0,
-      filter: 'blur(2px)'
+      filter: 'blur(2px) grayscale(1)'
     }
   ]
 )
 
-export {getRandomNumber, data2canvas, canvas2Image, getCanvasAnimateAttr}
+export {getRandomInteger, data2canvas, canvas2Image, getCanvasAnimateAttr, getRandomNumber}
