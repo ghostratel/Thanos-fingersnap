@@ -1,5 +1,5 @@
 /*!
- * thanos-fingersnap v1.0.2
+ * thanos-fingersnap v1.0.13
  * (c) GHOSTRATEL
  * Released under the MIT License.
  */
@@ -2016,7 +2016,8 @@
     useCORS: true,
     backgroundColor: null,
     // prevent bug
-    scale: 1
+    scale: 1,
+    logging: false
   };
 
   function Thanos(opt) {
@@ -2044,6 +2045,11 @@
     var _this = this;
 
     this.$el = typeof opt.el === 'string' ? document.querySelector(opt.el) : opt.el;
+
+    if (!this.$el) {
+      throw new Error("Element ".concat(opt.el, " is invalid."));
+    }
+
     this.$el.style = 'position: relative;';
     this.width = this.$el.getBoundingClientRect().width;
     this.height = this.$el.getBoundingClientRect().height;

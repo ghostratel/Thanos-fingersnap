@@ -7,14 +7,15 @@ const html2canvasOptions = {
 	useCORS: true,
 	backgroundColor: null,
 	// prevent bug
-	scale: 1
+	scale: 1,
+	logging: false
 }
 
 function Thanos(opt) {
 	this._init(opt)
 }
 
-Thanos.prototype._toggleChildren = function(flag) {
+Thanos.prototype._toggleChildren = function (flag) {
 	Array.prototype.forEach.call(this.$el.children, el => {
 		el.animate(
 			[
@@ -31,9 +32,14 @@ Thanos.prototype._toggleChildren = function(flag) {
 	})
 }
 
-Thanos.prototype._init = function(opt) {
+Thanos.prototype._init = function (opt) {
 	this.$el =
 		typeof opt.el === 'string' ? document.querySelector(opt.el) : opt.el
+
+	if (!this.$el) {
+		throw new Error(`Element ${opt.el} is invalid.`)
+	}
+
 	this.$el.style = 'position: relative;'
 
 	this.width = this.$el.getBoundingClientRect().width
@@ -62,7 +68,7 @@ Thanos.prototype._init = function(opt) {
 	})
 }
 
-Thanos.prototype.snap = function() {
+Thanos.prototype.snap = function () {
 	this._toggleChildren(true)
 
 	for (let i = 0; i < this.$imageDataArray.length; i++) {
@@ -86,7 +92,7 @@ Thanos.prototype.snap = function() {
 	}
 }
 
-Thanos.prototype.restore = function() {
+Thanos.prototype.restore = function () {
 	this._toggleChildren(false)
 }
 
